@@ -2,10 +2,10 @@ const { Client } = require("discord.js");
 const { ChannelType } = require("discord-api-types/v10")
 const DarkDashboard = require("dbd-dark-dashboard");
 const DBD = require("discord-dashboard");
-const WelcomeDB = require('../../Structures/Shemas/Welcome')
-const GeneralLogsDB = require('../../Structures/Shemas/LogsChannel')
-const LogsSwitchDB = require('../../Structures/Shemas/GeneralLogs')
-const MusicDB = require('../../Structures/Shemas/Music')
+const WelcomeDB = require('../../Structures/Schema/Welcome')
+const GeneralLogsDB = require('../../Structures/Schema/LogsChannel')
+const LogsSwitchDB = require('../../Structures/Schema/GeneralLogs')
+const MusicDB = require('../../Structures/Schema/Music')
 
 module.exports = {
     name: "ready",

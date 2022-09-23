@@ -1,5 +1,5 @@
 const { Client, ChatInputCommandInteraction, ButtonBuilder, ActionRowBuilder, ButtonStyle, EmbedBuilder} = require("discord.js");
-const DB = require("../../Structures/Shemas/Verification")
+const DB = require("../../Structures/Schema/Verification")
 const EditReply = require("../../Systems/EditReply");
 
 module.exports = {

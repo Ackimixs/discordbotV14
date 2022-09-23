@@ -1,6 +1,6 @@
 const { Client, GuildEmoji } = require("discord.js")
-const DB = require("../../Structures/Shemas/LogsChannel")
-const SwitchDB = require("../../Structures/Shemas/GeneralLogs")
+const DB = require("../../Structures/Schema/LogsChannel")
+const SwitchDB = require("../../Structures/Schema/GeneralLogs")
 const Embed = require("../../Systems/Embed")
 
 module.exports = {

@@ -8,11 +8,12 @@ const { promisify } = require("util");
 const { glob } = require("glob");
 const ASCII = require("ascii-table");
 
-
 const { DisTube } = require("distube")
 const { SpotifyPlugin } = require('@distube/spotify')
 const { SoundCloudPlugin } = require('@distube/soundcloud')
 const { YtDlpPlugin } = require('@distube/yt-dlp')
+
+const { DiscordTogether } = require("discord-together");
 
 const PG = promisify(glob)
 
@@ -22,12 +23,13 @@ const client = new Client({
     allowedMentions: { parse: ["everyone", "users", "roles"] },
     rest: { timeout: ms('1m') },
 })
-
 client.color = 'Random';
 client.events = new Collection();
-client.commands = new Collection();
 
+client.commands = new Collection();
 //Music part
+
+
 client.distube = new DisTube(client, {
     leaveOnStop: false,
     emitNewSongOnly: true,
@@ -41,19 +43,18 @@ client.distube = new DisTube(client, {
         new YtDlpPlugin()
     ]
 })
-
-
-
-const { DiscordTogether } = require("discord-together");
 client.DiscordTogether = new DiscordTogether(client);
 
-const Handlers = ['Commands', 'Events', "DistubeEvents", "EventStack", "Errors"]
-Handlers.forEach( handler => {
+(async() => {
 
-    require(`./Handlers/${handler}`)(client, PG, ASCII)
+    const Handlers = ['Commands', 'Events', "DistubeEvents", "EventStack", "Errors"]
+    Handlers.forEach( handler => {
 
-})
+        require(`./Handlers/${handler}`)(client, PG, ASCII)
 
-module.exports = client;
+    })
 
-client.login(process.env.BOT_TOKEN);
+    module.exports = client;
+
+    await client.login(process.env.BOT_TOKEN);
+})()

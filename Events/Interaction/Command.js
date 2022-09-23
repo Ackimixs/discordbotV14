@@ -1,8 +1,8 @@
 const { Client, CommandInteraction, InteractionType } = require('discord.js')
 const { ApplicationCommand } = InteractionType
 const Reply = require('../../Systems/Reply')
-const BlacklistGuildDB = require('../../Structures/Shemas/BlacklistG')
-const BlacklistUserDB = require('../../Structures/Shemas/BlacklistU')
+const BlacklistGuildDB = require('../../Structures/Schema/BlacklistG')
+const BlacklistUserDB = require('../../Structures/Schema/BlacklistU')
 const Embed = require('../../Systems/Embed')
 
 module.exports = {

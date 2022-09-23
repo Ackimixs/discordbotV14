@@ -2,7 +2,7 @@ const { Client } = require("discord.js");
 const client = require("../Structures/index");
 const Embed = require("../Systems/Embed");
 const invites = new Map();
-const LogsDB = require("../Structures/Shemas/LogsChannel");
+const LogsDB = require("../Structures/Schema/LogsChannel");
 const wait = require("timers/promises").setTimeout;
 const { Discord } = require('discord-id')
 

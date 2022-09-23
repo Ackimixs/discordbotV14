@@ -1,6 +1,6 @@
 const { Client, ChatInputCommandInteraction } = require("discord.js");
 const Reply = require("../../Systems/Reply");
-const LevelDB = require("../../Structures/Shemas/Level");
+const LevelDB = require("../../Structures/Schema/Level");
 const Embed = require("../../Systems/Embed");
 
 module.exports = {

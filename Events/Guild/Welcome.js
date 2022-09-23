@@ -1,5 +1,5 @@
 const { Client, GuildMember, EmbedBuilder } = require('discord.js');
-const DB = require('../../Structures/Shemas/Welcome');
+const DB = require('../../Structures/Schema/Welcome');
 
 module.exports = {
     name: 'guildMemberAdd',

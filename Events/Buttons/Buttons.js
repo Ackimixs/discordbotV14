@@ -1,5 +1,5 @@
-const { Client, MessageComponentInteraction, EmbedBuilder, InteractionType } = require('discord.js')
-const DB = require('../../Structures/Shemas/Verification')
+const { Client, MessageComponentInteraction, InteractionType } = require('discord.js')
+const DB = require('../../Structures/Schema/Verification')
 const EditReply = require('../../Systems/EditReply')
 
 module.exports = {

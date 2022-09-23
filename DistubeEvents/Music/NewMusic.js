@@ -1,7 +1,7 @@
 const { Client } = require("discord.js")
 const { Song, Queue } = require("distube")
 const Embed = require("../../Systems/Embed")
-const MusicDB = require("../../Structures/Shemas/Music")
+const MusicDB = require("../../Structures/Schema/Music")
 
 module.exports = {
     name: 'playSong',

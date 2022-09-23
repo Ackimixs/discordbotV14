@@ -1,7 +1,7 @@
 const { Client, Message } = require("discord.js")
 const Embed = require("../../Systems/Embed")
-const LevelDB = require("../../Structures/Shemas/Level")
-const ChannelDB = require("../../Structures/Shemas/LevelUpChannel")
+const LevelDB = require("../../Structures/Schema/Level")
+const ChannelDB = require("../../Structures/Schema/LevelUpChannel")
 
 module.exports = {
     name: 'messageCreate',

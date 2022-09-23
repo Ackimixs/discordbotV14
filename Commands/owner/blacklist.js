@@ -1,7 +1,7 @@
 const { Client, ChatInputCommandInteraction, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType} = require("discord.js");
 const EditReply = require("../../Systems/EditReply");
-const DBGuild = require("../../Structures/Shemas/BlacklistG");
-const DBUser = require("../../Structures/Shemas/BlacklistU");
+const DBGuild = require("../../Structures/Schema/BlacklistG");
+const DBUser = require("../../Structures/Schema/BlacklistU");
 const ms = require("ms");
 const Embed = require("../../Systems/Embed");
 
