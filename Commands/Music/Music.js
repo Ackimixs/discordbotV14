@@ -139,9 +139,9 @@ module.exports = {
 
                 const music = options.getString("play_name")
 
-                await client.distube.play(member.voice.channel, music, { member: member, textChannel: channel }).catch(err => console.log(err))
+                client.distube.play(member.voice.channel, music, { member: member, textChannel: channel }).catch(err => console.log(err))
 
-                //await Reply(interaction, "✅", `Playing **${music}**`)
+                await Reply(interaction, "✅", `Playing **${music}**`)
 
                 break;
 
