@@ -126,7 +126,7 @@ module.exports = {
      */
     async execute(interaction, client) {
 
-        const { options, user, guild, channel, member } = interaction;
+        const { options, guild, channel, member } = interaction;
 
         const subcommand = options.getSubcommand();
 
@@ -139,9 +139,9 @@ module.exports = {
 
                 const music = options.getString("play_name")
 
-                client.distube.play(member.voice.channel, music, { member: member, textChannel: channel }).catch(err => console.log(err))
+                await client.distube.play(member.voice.channel, music, { member: member, textChannel: channel }).catch(err => console.log(err))
 
-                await Reply(interaction, "✅", `Playing **${music}**`)
+                //await Reply(interaction, "✅", `Playing **${music}**`)
 
                 break;
 
