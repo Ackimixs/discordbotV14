@@ -1,6 +1,4 @@
 const { Client, EmbedBuilder } = require('discord.js')
-const channelID = process.env.LOGS_CHANNEL_ID
-
 /**
  * @param {Client} client
  */
@@ -15,7 +13,7 @@ module.exports = async (client) => {
     process.on("unhandledRejection", (reason, p) => {
         console.log(reason, p)
 
-        const Channel = client.channels.cache.get(channelID)
+        const Channel = client.channels.cache.get("1020658285474500648")
         if (!Channel) return
 
         Channel.send({
@@ -28,7 +26,7 @@ module.exports = async (client) => {
     process.on("uncaughtException", (err, origin) => {
         console.log(err, origin)
 
-        const Channel = client.channels.cache.get(channelID)
+        const Channel = client.channels.cache.get("1020658285474500648")
         if (!Channel) return
 
         Channel.send({
@@ -41,7 +39,7 @@ module.exports = async (client) => {
     process.on("uncaughtExceptionMonitor", (err, origin) => {
         console.log(err, origin)
 
-        const Channel = client.channels.cache.get(channelID)
+        const Channel = client.channels.cache.get("1020658285474500648")
         if (!Channel) return
 
         Channel.send({
