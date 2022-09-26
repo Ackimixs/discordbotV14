@@ -141,6 +141,8 @@ module.exports = {
 
                 client.distube.play(member.voice.channel, music, { member: member, textChannel: channel }).catch(err => console.log(err))
 
+                console.log(queue.songs[queue.songs.length - 1].name)
+
                 await Reply(interaction, "✅", `Playing **${music}**`)
 
                 break;
